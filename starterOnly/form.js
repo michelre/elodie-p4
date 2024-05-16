@@ -16,16 +16,17 @@ const validateEmail = (field) => {
 }
 
 
+//Fonction de validation de la majorité
 const validateBirthdate = (field) => {
-    // Récupérer la date de naissance 
+    // je récupére la date de naissance 
     const birthdate = new Date(field.value);
     
-    // Créer une date il y a 18 ans à partir de la date actuelle
-    const eighteenYearsAgo = new Date();
-    eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
-    
-    // Comparer la date de naissance avec il y a 18 ans
-    return birthdate <= eighteenYearsAgo;
+    // je cree une date il y a 18 ans 
+    const returneighteen = new Date();
+    returneighteen.setFullYear(returneighteen.getFullYear() - 18);
+    message.birthdate;
+    // je compare la date de naissance avec il y a 18 ans
+    return birthdate <= returneighteen;
 }
 
 
