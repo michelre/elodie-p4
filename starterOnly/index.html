@@ -54,7 +54,7 @@
 
       <div class="bground">
         <div class="content">
-          <span class="close"></span>
+          <span class="close" id="closeForm"></span>
           <div class="modal-body">
             <form
               name="reserve"
@@ -69,7 +69,7 @@
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2"                  
+               
                 /><br>
               </div>
               <div
@@ -87,7 +87,7 @@
                 <label>E-mail</label><br>
                 <input
                   class="text-control"
-                  type="email"
+                  type="text"
                   id="email"
                   name="email"
                 /><br>
@@ -105,7 +105,7 @@
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity">
+                <input type="text" class="text-control" id="quantity" name="quantity">
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -154,13 +154,7 @@
                   <span class="checkbox-icon"></span>
                   Chicago</label
                 >
-                <input
-                  class="checkbox-input"
-                  type="radio"
-                  id="location5"
-                  name="location"
-                  value="Boston"
-                />
+                <input class="checkbox-input" type="radio" id="location5" name="location" value="Boston"/>
                 <label class="checkbox-label" for="location5">
                   <span class="checkbox-icon"></span>
                   Boston</label
@@ -184,10 +178,10 @@
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
-                  name="CGU"
-                  checked
+                  name="userConditions"
+                
                 />
-                <label class="checkbox2-label" for="checkbox1">
+                <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
@@ -195,7 +189,7 @@
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
               </div>
@@ -209,8 +203,16 @@
           </div>
         </div>
       </div>
-      <div class="modal-success"></div>
     </main>    
+    <div class="bground" id="modal-success">
+      <div class="content">
+        <span class="close" id="closeSuccess"></span>
+        <div class="modal-body">
+          <h2>Merci pour votre inscription</h2>
+          <button class="btn" id="btn-close" type="button">Fermer</button>
+        </div>
+      </div>
+    </div>
     <footer>
       <p class="copyrights">
         Copyright 2014 - 2022, GameOn Inc.

@@ -1,5 +1,13 @@
 const form = document.querySelector('form')
-
+const message = {
+    first: "Le champs doit comporter entre 2 et 30 caractères,les caractères spéciaux ne sont pas autorisés.",
+    last: "Le champs doit comporter entre 2 et 30 caractères,les caractères spéciaux ne sont pas autorisés.",
+    email: "Veuillez entrer une adresse e-mail valide.",
+    quantity: "Veuillez entrer un nombre valide (entre 1 et 99).",
+    birthdate: "Vous devez être âgé d'au moins 18 ans pour vous inscrire.",
+    location: "Veuillez sélectionner une ville.",
+    userConditions: "Veuillez accepter les conditions d'utilisation."
+};
 //regex pour la validation du Nom et prénom
 const validateName = (field) => {
     const regexName = /^([A-Za-z|\s]{2,30})?([-]{0,1})?([A-Za-z|\s]{2,30})$/;
@@ -127,11 +135,14 @@ form.addEventListener('submit', (e) => {
     // displayError(location, isLocationValid)
     // displayError(userConditions, isUserConditionsValid)
 
-    if(isFirstValid && isLastValid && isEmailValid){
+   
+    if(isFirstValid && isLastValid && isEmailValid && isQuantityValid && isBirthdateValid && isLocationValid && isUserConditionsValid){
         form.reset()
         hideModal()
-        /**
-         * Afficher la modal de succès
-         */
+        successModal()
     }
+    else {
+        closeModalSuccess()
+    }
+  
 })

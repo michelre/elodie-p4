@@ -30,6 +30,7 @@ img {
   padding-right: 1rem;
 }
 
+/* Navbar */
 .topnav {
   overflow: hidden;
   margin: 3.5%;
@@ -68,13 +69,15 @@ img {
   display: none;
 }
 
+
+
 @media screen and (max-width: 768px) {
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
-}
+} 
 
 @media screen and (max-width: 768px) {
   .topnav.responsive {position: relative;}
@@ -169,6 +172,7 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 
+
 .content {
   margin: 5% auto;
   width: 100%;
@@ -190,7 +194,7 @@ main {
 
 label {
   font-family: var(--font-default);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: normal;
   display: inline-block;
   margin-bottom: 11px;
@@ -208,6 +212,11 @@ input {
   font-size: 20px;
   height: 48px;
 }
+/* class errror ajout de border red */
+/* input.error {
+  border: 5px solid red;
+}  */
+
 .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
@@ -223,15 +232,17 @@ input {
 .formData[data-error-visible="true"]::after {
   opacity: 1;
 }
+/* entour la bordure si data-error-visible="true" */
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
+
 input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
     color: red;
-} */
+}
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -322,7 +333,7 @@ input[data-error]::after {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup {
+.btn-signup,#btn-close {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -495,12 +506,14 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    font-size:40px;
     white-space: normal;
+    box-sizing: border-box;
   }
   .hero-text {
     width: unset;
-    font-size: 1.5rem;
+    font-size:13px;
+    box-sizing: border-box;
   }
   .hero-img img {
     border-radius: 10px;
@@ -516,6 +529,7 @@ footer {
     text-align: center;
   }
 }
+
 
 @keyframes modalopen {
   from {
