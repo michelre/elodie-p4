@@ -38,9 +38,21 @@ const validateQuantity = (field) => {
 
 }
 
+//Fonction de validation de la ville choisie une ville doit etre choisie
 const validateLocation = () => {
-    
-} 
+    //je recupère les radios
+    const locationRadios = document.querySelectorAll('input[type="radio"][name="location"]');
+    let isChecked = false;
+    //je boucle sur les radios si une selectionné alors isChecked est vrai
+    locationRadios.forEach((radio) => {
+        if (radio.checked) {
+            isChecked = true;
+        }
+    });
+    message.location;
+//je retourne isChecked
+    return isChecked;
+};
 
 const validateCGU = () => {
 
