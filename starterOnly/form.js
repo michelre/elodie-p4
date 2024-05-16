@@ -8,8 +8,10 @@ const validateName = (field) => {
 }
 
 
+//regex pour la validation de l'email 
 const validateEmail = (field) => {
     const regexEmail = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/
+    message.email;
     return regexEmail.test(field.value);
 }
 
