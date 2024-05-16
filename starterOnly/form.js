@@ -30,9 +30,12 @@ const validateBirthdate = (field) => {
 }
 
 
+//regex pour valider la quantité et empecher les lettre et les caractères speciaux
 const validateQuantity = (field) => {
     const regexQuantity = /^([0-9]{1,2})$/;
-   return regexQuantity.test(field.value);
+    message.quantity;
+    return regexQuantity.test(field.value);
+
 }
 
 const validateLocation = () => {
