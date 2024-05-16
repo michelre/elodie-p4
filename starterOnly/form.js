@@ -107,15 +107,25 @@ form.addEventListener('submit', (e) => {
     const last = e.target.last
     const email = e.target.email
     const quantity = e.target.quantity
+    const birthdate = e.target.birthdate
+    const location = e.target.location
+    const userConditions = e.target.userConditions
 
     const isFirstValid = validateName(first)
     const isLastValid = validateName(last)
     const isEmailValid = validateEmail(email)
     const isQuantityValid = validateQuantity(quantity)
+    const isBirthdateValid = validateBirthdate(birthdate)
+    const isLocationValid = validateLocation(location)
+    const isUserConditionsValid = validateUserConditions(userConditions)
 
     displayError(first, isFirstValid)
     displayError(last, isLastValid)
     displayError(email, isEmailValid)
+    displayError(quantity, isQuantityValid)
+    displayError(birthdate, isBirthdateValid)
+    // displayError(location, isLocationValid)
+    // displayError(userConditions, isUserConditionsValid)
 
     if(isFirstValid && isLastValid && isEmailValid){
         form.reset()
