@@ -1,8 +1,10 @@
 const form = document.querySelector('form')
 
+//regex pour la validation du Nom et prénom
 const validateName = (field) => {
-   const regexName = /^([A-Za-z|\s]{2,30})?([-]{0,1})?([A-Za-z|\s]{2,30})$/;
-   return regexName.test(field.value);
+    const regexName = /^([A-Za-z|\s]{2,30})?([-]{0,1})?([A-Za-z|\s]{2,30})$/;
+    message.first;
+    return regexName.test(field.value);  
 }
 
 
