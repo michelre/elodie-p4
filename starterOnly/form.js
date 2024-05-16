@@ -69,14 +69,37 @@ const validateUserConditions = () => {
     return isChecked; 
 }
 
-const displayError = (field, isValid) => {
-    if(!isValid){
-        field.classList.add('error')
-    } else {
-        field.classList.remove('error')
-    }
+// const displayError = (field, isValid) => {
+//     if(!isValid){
+//         field.classList.add('error')
+//     } else {
+//         field.classList.remove('error')
+//     }
     
-}
+// }
+
+const displayError = (field, isValid) => {
+    // Sélectionne la div parent .formData
+    const formDataDiv = field.closest('.formData'); 
+    //creation d'une div sous chaque champs en cas d'erreur
+    const errorDiv = document.createElement('div');
+   
+    formDataDiv.appendChild(errorDiv);
+
+  
+    // Si le champ n'est pas valide
+    if (!isValid) {
+        // Ajoute l'attribut data-error-visible
+        formDataDiv.setAttribute('data-error-visible', 'true');
+        formDataDiv.appendChild(errorDiv);
+        //ajouter la class data-error a la div
+        // errorDiv.classList.add('form-data');
+    } else {
+        // Supprime l'attribut data-error-visible
+        formDataDiv.removeAttribute('data-error-visible');
+        formDataDiv.removeChild(errorDiv);
+    }
+};
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
