@@ -54,8 +54,19 @@ const validateLocation = () => {
     return isChecked;
 };
 
-const validateCGU = () => {
-
+//Fonction de validation des conditions d'utilisations
+const validateUserConditions = () => {
+    //je recupère la checkbox
+    const userConditions = document.querySelector('input[type="checkbox"][name="userConditions"]');
+    //isChecked est faux
+    let isChecked = false;
+    //si la checkbox est coché alors isChecked est vrai
+    if (userConditions.checked) {
+        isChecked = true;
+    }
+    //je retourne isChecked
+    message.userConditions;
+    return isChecked; 
 }
 
 const displayError = (field, isValid) => {
