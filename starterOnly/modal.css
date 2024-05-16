@@ -31,9 +31,17 @@ img {
 }
 
 /* Navbar */
+
+.header-logo img {
+  width: 200px;
+  position: relative;
+  top: 10px;
+}
+
 .topnav {
   overflow: hidden;
-  margin: 3.5%;
+  margin: 20px 15px;
+  position: relative;
 }
 .header-logo {
     float: left;
@@ -57,6 +65,7 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  text-decoration: underline;
 }
 
 .topnav a.active {
@@ -71,25 +80,45 @@ img {
 
 
 
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
+    color: red;
   }
-} 
+} */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    color: red;
+    border-radius: 15px;
+  }
+  .topnav a.icon:hover{
+    background: white;
+  }
+
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
+    background: red !important;
+    color: white !important;
   }
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
+  }
+
+  .header-logo img{
+    width: 123px;
+    position: absolute;
+    top: 18px;
   }
 }
 
@@ -100,7 +129,6 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
   }
 } 
 
@@ -108,9 +136,6 @@ main {
   font-size: 130%;
   font-weight: bolder;
   color: black;
-  padding-top: 0.5vw;
-  padding-left: 2vw;
-  padding-right: 2vw;
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
@@ -425,7 +450,7 @@ input[data-error]::after {
   margin-bottom: 10px;
 }
 .hero-content {
-  padding: 51px 67px;
+  padding: 53px 56px;
   grid-column: span 4;
   background: #232323;
   color: #fff;
@@ -447,7 +472,7 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: normal;
   white-space: nowrap;
 }
@@ -469,6 +494,7 @@ input[data-error]::after {
   grid-column: span 8;
 }
 .hero-img img {
+  object-fit: cover;
   width: 100%;
   height: 100%;
   display: block;
@@ -497,7 +523,7 @@ footer {
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 0;
   }
   .hero-content::after {
     content: unset;
@@ -515,6 +541,7 @@ footer {
     width: unset;
     font-size:13px;
     box-sizing: border-box;
+    margin-top: 17px;
   }
   .hero-img img {
     border-radius: 10px;

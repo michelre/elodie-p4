@@ -11,7 +11,7 @@ function editNav() {
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
-const ModalSuccess = document.querySelector('#modal-success');
+const modalSuccess = document.querySelector('#modal-success');
 const closeSuccess = document.querySelector('#closeSuccess');
 const closeForm = document.querySelector('#closeForm');
 const btnCloseSucces = document.querySelector('#btn-close');
@@ -29,25 +29,20 @@ function hideModal() {
 }
 
 function successModal() {
-  ModalSuccess.style.display = "block"; 
+  modalSuccess.style.display = "block"; 
 }
-
-//fermeture de la modale formulaire
-closeForm.addEventListener("click", closeModalForm);
 
 function closeModalForm() {
   modalbg.style.display = "none";
 }
 
+function closeModalSuccess() {
+  modalSuccess.style.display = "none";
+}
+
+//fermeture de la modale formulaire
+closeForm.addEventListener("click", closeModalForm);
 //fermeture de la modale de succes
 closeSuccess.addEventListener("click", closeModalSuccess);
-
-function closeModalSuccess() {
-  ModalSuccess.style.display = "none";
-}
 //fermeture de la modale avec le btn fermer
 btnCloseSucces.addEventListener("click", closeModalSuccess);
-
-function closeModalSuccess() {
-  ModalSuccess.style.display = "none";
-}
